@@ -1,0 +1,19 @@
+---
+
+
+const { title = "My Astro Website", ...props } = Astro.props;
+---
+<link rel="sitemap" href="/sitemap-index.xml">
+<title>{title}</title>
+<meta name="description" content="Welcome to my new Astro site!">
+
+<!-- Web analytics -->
+<script data-goatcounter="https://my-account.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<!-- Open Graph tags -->
+<meta property="og:title" content="My New Astro Website" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="">
