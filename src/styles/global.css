@@ -77,9 +77,9 @@ body {
     text-shadow: 1px 1px 3px #000;
 }
 
-/* Flex row for input and button */
 .input-button-row {
     display: flex;
+    flex-direction: row;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,6 @@ body {
     background-color: #45a049;
 }
 
-/* Optional: Additional responsiveness for very small screens */
 @media (max-width: 480px) {
     .content-cont h1 {
         font-size: 1.8rem;
@@ -122,9 +121,12 @@ body {
     .content {
         padding: 0.5rem;
     }
+
+    .input-button-row {
+        flex-direction: column;
+    }
 }
 
-/* Tablet styling */
 @media (min-width: 481px) and (max-width: 768px) {
     .content-cont h1 {
         font-size: 2.5rem;
