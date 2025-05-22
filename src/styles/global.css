@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +13,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'PressStart2P', system-ui;
     height: 100vh;
 }
 
@@ -16,5 +24,29 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1; /* ensures the image is in the background */
+    z-index: -1;
+}
+
+.content-cont {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.content-cont h1 {
+    font-size: 52px;
+    color: white;
+    margin-top: 20px;
+    text-shadow:
+        -1px -1px 10px #000,
+         1px -1px 10px #000,
+        -1px  1px 10px #000,
+         1px  1px 10px #000;
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
