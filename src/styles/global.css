@@ -15,6 +15,7 @@
 body {
     font-family: 'PressStart2P', system-ui;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .fullscreen-bg {
@@ -28,17 +29,26 @@ body {
     z-index: -1;
 }
 
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
 .content-cont {
     display: grid;
     justify-content: center;
     justify-items: center;
-    gap: 2rem;
+    gap: 3.5rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .content-cont h1 {
-    font-size: 52px;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     color: white;
-    margin-top: 20px;
     text-shadow:
         -1px -1px 10px #000,
          1px -1px 10px #000,
@@ -50,4 +60,73 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.user-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.user-input-form label {
+    color: white;
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Flex row for input and button */
+.input-button-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-button-row input[type="text"] {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-button-row input[type="text"]::placeholder {
+    color: #666;
+}
+
+.input-button-row button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.input-button-row button:hover {
+    background-color: #45a049;
+}
+
+/* Optional: Additional responsiveness for very small screens */
+@media (max-width: 480px) {
+    .content-cont h1 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        padding: 0.5rem;
+    }
+}
+
+/* Tablet styling */
+@media (min-width: 481px) and (max-width: 768px) {
+    .content-cont h1 {
+        font-size: 2.5rem;
+    }
 }

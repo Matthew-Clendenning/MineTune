@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import mcGrassBlock from '../assets/minecraft-grass-block.png';
-import sword from '../assets/minecraft-sword.png';
 ---
 
 <Layout>
@@ -10,7 +9,13 @@ import sword from '../assets/minecraft-sword.png';
         <div class="content-cont">
             <h1>MineTune</h1>
             <div class="content">
-                
+                <form class="user-input-form">
+                    <label for="userInput">Enter your tune name:</label>
+                    <div class="input-button-row">
+                        <input type="text" id="userInput" name="userInput" placeholder="Type here..." />
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
