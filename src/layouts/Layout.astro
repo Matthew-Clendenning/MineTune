@@ -1,5 +1,6 @@
 ---
 import Head from '../components/Head.astro';
+import '../styles/global.css';
 
 const { ...props } = Astro.props;
 ---
@@ -11,7 +12,6 @@ const { ...props } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<Head />
 		<meta name="generator" content={Astro.generator} />
-		<title>Minecraft Music Guesser</title>
 	</head>
 	<body>
 		<slot />
