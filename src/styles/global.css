@@ -57,7 +57,7 @@ body {
 }
 
 .content {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
@@ -111,6 +111,24 @@ body {
 
 .input-button-row button:hover {
     background-color: #45a049;
+}
+
+.audio-cont {
+    margin-top: auto;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.play-icon, .pause-icon {
+    width: 80px;
+    height: 80px;
+    color: #45a049;
+    cursor: pointer;
+}
+
+.pause-icon {
+    display: none;
 }
 
 @media (max-width: 480px) {
