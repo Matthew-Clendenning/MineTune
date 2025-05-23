@@ -61,7 +61,6 @@ body {
 
 .info-icon:hover, .q-icon:hover {
     fill: #45a049;
-    color: white;
 }
 
 .header h1 {
@@ -147,7 +146,6 @@ body {
 
 .play-icon:hover, .pause-icon:hover {
     fill: #45a049;
-    color: white;
 }
 
 .pause-icon {
@@ -166,10 +164,22 @@ body {
     .input-button-row {
         flex-direction: column;
     }
+
+    .play-icon:hover, .pause-icon:hover {
+        fill: none;
+    }
+
+    .info-icon:hover, .q-icon:hover {
+        fill: none;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
     .content-cont h1 {
         font-size: 2.5rem;
+    }
+
+    .play-icon:hover, .pause-icon:hover {
+        fill: none;
     }
 }
